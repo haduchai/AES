@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    height: 250px;
+}
+
+.cipher_name {
+    position: relative;
+    top: -180px;
+    left: 70px;
+    font-size: 3rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(45deg, #11cee7, #045f91, #5ccded);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 3px 2px rgba(0, 4, 252, 0.3);
+}
+
+.header_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main h2 {
+    color: #041118;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px 0;
+    text-shadow: 4px 3px 2px rgba(0, 4, 252, 0.3);
+}
+
+.container {
+    background-color: #ffffff;
+    height: 450px;
+    width: 70%;
+    margin: 10px auto;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.selectKey {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.selectKey > div {
+    width: 40%;
+    text-align: center;
+}
+
+.selectKey label,
+.content label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.selectKey input,
+.selectKey select {
+    width: 40%;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.selectKey input[type="text"]:focus,
+.selectKey select:focus {
+    border: 1px solid #045f91;
+}
+
+.content {
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.plainText,
+.cipherText {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    padding: 10px;
+}
+
+.plainText button,
+.cipherText button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2784af;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.plainText i,
+.cipherText i {
+    margin: 0 5px;
+}
+
+.processing-time {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 20px;
+    color: red;
+}
