@@ -29,9 +29,9 @@
             <label for="secretKey">Secret Key:</label>
             <input type="text" id="secretKey" name="secretKey" 
             value="{% if secretKey %}{{secretKey}}{% else %}{% endif %}"
-            required />
-            <span class="error-message" id="secretKeyError"></span>
-            <!-- Thêm phần tử span để hiển thị thông báo lỗi -->
+            />
+            <!-- Hiển thị thông báo lỗi -->
+            <span class="error-message" id="error-message"></span>
           </div>
 
           <div>
@@ -41,8 +41,8 @@
               <option value="192">192 bits</option>
               <option value="256">256 bits</option>
             </select>
-            <span class="error-message" id="keyLengthError"></span>
-            <!-- Thêm phần tử span để hiển thị thông báo lỗi -->
+            <!-- Hiển thị thông báo lỗi -->
+            <span class="error-message" id="error-message"></span>
           </div>
         </div>
 
@@ -56,9 +56,8 @@
               cols="50"
               placeholder="plain text"
             >{% if plainText %}{{plainText}}{% elif decrypted %}{{decrypted}}{% endif %}</textarea>
-            <button onclick="encrypt()" type="submit" name = 'encrypt'>
-              <i class="fas fa-arrow-right" style="color: #ffffff"></i
-              >Encryption
+            <button onclick="return validateInput()" type="submit" name = 'encrypt'>
+              <i class="fas fa-arrow-right" style="color: #ffffff"></i>Encryption
             </button>
           </div>
 
@@ -71,8 +70,8 @@
               cols="50"
               placeholder="cipher text"
             >{% if cipherText %}{{cipherText}}{% elif encrypted %}{{encrypted}}{% endif %}</textarea>
-            <button onclick="decrypt()" type="submit" name = 'decrypt' >
-              <i class="fas fa-arrow-left"></i>Decryption
+            <button onclick="return validateInput()" type="submit" name = 'decrypt' >
+              <i class="fas fa-arrow-left" style="color: #ffffff"></i>Decryption
             </button>
           </div>
         </div>
